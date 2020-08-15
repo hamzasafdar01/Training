@@ -1,0 +1,47 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Counter</title>
+    <script src="vue.js"></script>
+</head>
+<body>
+    <div id="app">
+        <button v-on:click="increaseOne">Click Me</button>
+        <p>{{counter}}</p>
+        <hr>
+        <p v-on:mousemove="findCoardinates">Coardinates: {{x}} / {{y}}</p>
+        <hr>
+        <input type="text" v-on:keyup.enter="alert">
+    </div>
+    
+
+
+    <script>
+        new Vue({
+            el: '#app',
+            data: {
+                counter: 0,
+                x: 0,
+                y: 0,
+            },
+            methods: {
+                increaseOne: function() {
+                    this.counter++;
+                },
+
+                findCoardinates: function(event) {
+                    this.x = event.clientX;
+                    this.y = event.clientY;
+                },
+                alert: function() {
+                    alert("Key Pressed");
+                },
+
+            }
+        });
+
+    </script>
+</body>
+</html>

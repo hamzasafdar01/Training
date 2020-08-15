@@ -1,0 +1,38 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <title>VUE JS</title>
+    <script src="vue.js"></script>
+</head>
+<body>
+    <div id="app">
+        <input type="text" v-on:input="updateText">
+        <p><a v-bind:href="link">{{title}}</a> </p>
+        <p><a v-bind:href="link">Google</a> {{ fdata() }}</p>
+        <hr>
+        <p v-html="finishedLink"></p>
+    </div>
+    <script>
+        new Vue({
+            el: '#app',
+            data: {
+                title: "Hello World!",
+                link: "http://www.google.com",
+                finishedLink: "<a href = 'http://www.google.com'>V-html directive</a>",
+                
+            },
+            methods: {
+                fdata: function() {
+                    return 'Hello from function';
+                },
+
+                updateText: function(event) {
+                    this.title = event.target.value;
+                }
+
+            },
+        });
+
+    </script>    
+</body>
+</html>
