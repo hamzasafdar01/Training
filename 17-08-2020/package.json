@@ -1,0 +1,16 @@
+{
+  "name": "17-08-2020",
+  "version": "1.0.0",
+  "description": "",
+  "main": "parsingreqdata.js",
+  "scripts": {
+    "test": "echo \"Error: no test specified\" && exit 1",
+    "start": "nodemon parsingreqdata.js",
+    "start-server": "node parsingreqdata.js"
+  },
+  "author": "",
+  "license": "ISC",
+  "devDependencies": {
+    "nodemon": "^2.0.4"
+  }
+}
