@@ -1,0 +1,38 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <script src="https://npmcdn.com/vue/dist/vue.js"></script>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+<body>
+    <div id="app">
+        <ul>
+            <li v-for="i in items">{{ i }}</li>
+        </ul>
+
+        <template v-for="(item, index) in items">
+            <p>{{item}}</p>
+            <p>{{index}}</p>
+        </template>
+
+    </div>
+    
+
+    <script>
+        new Vue({
+            el: "#app",
+            data: {
+                item4: 'item4',
+                items: ['item1','item2','item3'],
+                person: [
+                    {name: 'Max', age: 27, color: 'red'},
+                    {name: 'Anna', age: 30, color: 'blue'},
+                ] 
+            },
+        });
+
+    </script>
+</body>
+</html>
